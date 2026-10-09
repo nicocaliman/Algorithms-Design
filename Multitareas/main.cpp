@@ -14,15 +14,15 @@ using namespace std;
 
 /*@ <answer>
 
- Escribe aquí un comentario general sobre la solución, explicando cómo
- se resuelve el problema y cuál es el coste de la solución, en función
- del tamaño del problema.
+ Escribe aquÃ­ un comentario general sobre la soluciÃ³n, explicando cÃ³mo
+ se resuelve el problema y cuÃ¡l es el coste de la soluciÃ³n, en funciÃ³n
+ del tamaÃ±o del problema.
 
  @ </answer> */
 
 
  // ================================================================
- // Escribe el código completo de tu solución aquí debajo
+ // Escribe el cÃ³digo completo de tu soluciÃ³n aquÃ­ debajo
  // ================================================================
  //@ <answer>
 
@@ -62,13 +62,13 @@ void resuelveCaso() {
     bool conflicto = false;
     int ultimo_fin = 0;
 
-    // 3. Procesar cronológicamente las tareas
+    // 3. Procesar cronolÃ³gicamente las tareas
     while (!pq.empty() && !conflicto) {
         Tarea curr = pq.top();
         pq.pop();
 
         if (curr.ini >= T) {
-            break; // Las siguientes tareas empiezan fuera de la ventana de interés
+            break; // Las siguientes tareas empiezan fuera de la ventana de interÃ©s
         }
 
         if (curr.ini < ultimo_fin) {
@@ -77,7 +77,7 @@ void resuelveCaso() {
         else {
             ultimo_fin = curr.fin;
 
-            // Si es periódica y vuelve a ocurrir dentro de [0, T), reinsertar
+            // Si es periÃ³dica y vuelve a ocurrir dentro de [0, T), reinsertar
             if (curr.periodo > 0 && curr.ini + curr.periodo < T) {
                 pq.push({ curr.ini + curr.periodo, curr.fin + curr.periodo, curr.periodo });
             }
@@ -89,7 +89,7 @@ void resuelveCaso() {
 }
 
 //@ </answer>
-//  Lo que se escriba dejado de esta línea ya no forma parte de la solución.
+//  Lo que se escriba dejado de esta lÃ­nea ya no forma parte de la soluciÃ³n.
 
 int main() {
     // ajustes para que cin extraiga directamente de un fichero
