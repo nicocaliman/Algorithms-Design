@@ -10,7 +10,7 @@ class Manchas {
 private:
 	int F;
 	int C;
-	std::vector<vector<bool>>visitado; // visit[v] = ¿hay camino de s a v?	
+	std::vector<vector<bool>>visitado; // visit[v] = Â¿hay camino de s a v?	
 	int numManchas;
 	int manchaMasGrande;
 
