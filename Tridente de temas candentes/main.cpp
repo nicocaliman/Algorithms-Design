@@ -22,24 +22,24 @@ struct Tema {
 struct ComparadorTemas {
     bool operator()(Tema const& a, Tema const& b) const {
         if (a.numCitadas == b.numCitadas) {
-            return a.llegadaUltimoEvento > b.llegadaUltimoEvento; // Más reciente primero[cite: 3]
+            return a.llegadaUltimoEvento > b.llegadaUltimoEvento; // MÃ¡s reciente primero[cite: 3]
         }
-        return a.numCitadas > b.numCitadas; // Más citas primero
+        return a.numCitadas > b.numCitadas; // MÃ¡s citas primero
     }
 };
 
 /*@ <answer>
 
- Explicación de la solución:
+ ExplicaciÃ³n de la soluciÃ³n:
  Se utiliza una cola de prioridad indexada (IndexPQ) para mantener los temas ordenados
- por su número de citas y por la reciencia de su último evento 'C'[cite: 3].
- Se mantiene un mapeo entre el nombre del tema (string) y su identificador único (int).
- Para las consultas TC se extraen hasta 3 elementos del montículo, se imprimen y se vuelven
+ por su nÃºmero de citas y por la reciencia de su Ãºltimo evento 'C'[cite: 3].
+ Se mantiene un mapeo entre el nombre del tema (string) y su identificador Ãºnico (int).
+ Para las consultas TC se extraen hasta 3 elementos del montÃ­culo, se imprimen y se vuelven
  a reinsertar inmediatamente para conservar el estado de la cola.
 
  Coste:
- - Tiempo: O(N log U), donde N es el número de eventos y U <= N es el número de temas únicos.
-   Cada actualización (C o E) y cada extracción de la consulta TC toma O(log U).
+ - Tiempo: O(N log U), donde N es el nÃºmero de eventos y U <= N es el nÃºmero de temas Ãºnicos.
+   Cada actualizaciÃ³n (C o E) y cada extracciÃ³n de la consulta TC toma O(log U).
  - Espacio: O(U) para almacenar la cola de prioridad, las cadenas y el estado de cada tema.
 
  @ </answer> */
@@ -56,7 +56,7 @@ bool resuelveCaso() {
     unordered_map<string, int> nombre_a_entero;
     IndexPQ<Tema, ComparadorTemas> pq(n + 1);
 
-    // Posición 0 vacía para alinear el vector con IDs base 1
+    // PosiciÃ³n 0 vacÃ­a para alinear el vector con IDs base 1
     vector<string> temas(1, "");
     vector<Tema> estadoTemas(n + 1, { 0, 0 });
 
@@ -73,7 +73,7 @@ bool resuelveCaso() {
             for (int i = 0; i < 3 && !pq.empty(); i++) {
                 auto p = pq.top();
 
-                // Si el tema más citado tiene 0 citas, los temas sin citas no cuentan[cite: 3]
+                // Si el tema mÃ¡s citado tiene 0 citas, los temas sin citas no cuentan[cite: 3]
                 if (p.prioridad.numCitadas <= 0) break;
 
                 pq.pop();
