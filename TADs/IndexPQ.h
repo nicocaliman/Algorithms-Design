@@ -1,12 +1,12 @@
 #pragma once
 /**
- * ImplementaciÛn de colas con prioridad mediante montÌculos.
+ * Implementaci√≥n de colas con prioridad mediante mont√≠culos.
  * Los elementos son enteros de 0 a N-1 que tienen asociada una prioridad
  * dentro de la cola. La prioridad de un elemento puede ser modificada
  * con coste en O(log N).
  *
  * Copyright (c) 2020 Alberto Verdejo
- * Modificado por 2023 Ignacio F·bregas
+ * Modificado por 2023 Ignacio F√°bregas
  */
 
 #ifndef INDEXPQ_H_
@@ -18,7 +18,7 @@
 
 
  // T es el tipo de las prioridades
- // Comparator dice cu·ndo un valor de tipo T es m·s prioritario que otro
+ // Comparator dice cu√°ndo un valor de tipo T es m√°s prioritario que otro
 template <typename T = int, typename Comparator = std::less<T>>
 class IndexPQ {
 
@@ -31,13 +31,13 @@ public:
 
 private:
     // vector que contiene los datos (pares < elem, prioridad >)
-    std::vector<Par> array;      // El primer elemento est· en la posiciÛn 1
+    std::vector<Par> array;      // El primer elemento est√° en la posici√≥n 1
 
     // vector que contiene las posiciones en array de los elementos
-    std::vector<int> posiciones;   // un 0 indica que el elemento no est·
+    std::vector<int> posiciones;   // un 0 indica que el elemento no est√°
 
-    /* Objeto funciÛn que sabe comparar elementos.
-     * antes(a,b) es cierto si a es m·s prioritario que b (a debe salir antes que b)
+    /* Objeto funci√≥n que sabe comparar elementos.
+     * antes(a,b) es cierto si a es m√°s prioritario que b (a debe salir antes que b)
      */
     Comparator antes;
 
@@ -99,7 +99,7 @@ public:
     void pop() {
         if (size() == 0) throw std::domain_error("No se puede eliminar el primero de una cola vacia.");
         else {
-            posiciones[array[1].elem] = 0; // para indicar que no est·
+            posiciones[array[1].elem] = 0; // para indicar que no est√°
             if (size() > 1) {
                 array[1] = std::move(array.back());
                 posiciones[array[1].elem] = 1;
@@ -111,7 +111,7 @@ public:
         }
     }
 
-    /* Escritura del montÌculo. MÈtodo para depurar */
+    /* Escritura del mont√≠culo. M√©todo para depurar */
     void print() {
         std::cout << "[";
         for (int i = 1; i < array.size() - 1; i++)
@@ -139,7 +139,7 @@ private:
             // cambiar al hijo derecho de i si existe y va antes que el izquierdo
             if (hijo < size() && antes(array[hijo + 1].prioridad, array[hijo].prioridad))
                 ++hijo;
-            // flotar el hijo si va antes que el elemento hundiÈndose
+            // flotar el hijo si va antes que el elemento hundi√©ndose
             if (antes(array[hijo].prioridad, parmov.prioridad)) {
                 array[hueco] = std::move(array[hijo]); posiciones[array[hueco].elem] = hueco;
                 hueco = hijo; hijo = 2 * hueco;
