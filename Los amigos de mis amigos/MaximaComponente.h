@@ -6,7 +6,7 @@ using namespace std;
 
 class MaximaComponente {
 private:
-	std::vector<bool> visit; // visit[v] = ¿hay camino de s a v?		
+	std::vector<bool> visit; // visit[v] = Â¿hay camino de s a v?		
 	int maximaComponente;
 
 	int dfs(Grafo const& G, int v) {
