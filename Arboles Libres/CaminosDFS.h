@@ -3,9 +3,9 @@
 
 class CaminosDFS {
 private:
-	std::vector<bool> visit; // visit[v] = ¿hay camino de s a v?
-	std::vector<int> ant; // ant[v] = último vértice antes de llegar a v
-	int s; // vértice origen
+	std::vector<bool> visit; // visit[v] = Â¿hay camino de s a v?
+	std::vector<int> ant; // ant[v] = Ãºltimo vÃ©rtice antes de llegar a v
+	int s; // vÃ©rtice origen
 	void dfs(Grafo const& G, int v) {
 		visit[v] = true;
 		for (int w : G.ady(v)) {
@@ -21,7 +21,7 @@ public:
 		ant(g.V()), s(s) {
 		dfs(g, s);
 	}
-	// ¿hay camino del origen a v?
+	// Â¿hay camino del origen a v?
 	bool hayCamino(int v) const {
 		return visit[v];
 	}
