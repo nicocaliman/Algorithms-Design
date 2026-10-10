@@ -29,11 +29,19 @@ public:
 	bool esLibre(Grafo const& g) const {
 		
 		bool esLibre = true;
-		for (int i = 1; i < g.V() && esLibre; i++)
+		
+		if (g.A() != g.V()-1)
 		{
-			if (!hayCamino(i))
+			esLibre = false;
+		}
+		else {
+
+			for (int i = 1; i < g.V() && esLibre; i++)
 			{
-				esLibre = false;
+				if (!hayCamino(i))
+				{
+					esLibre = false;
+				}
 			}
 		}
 
