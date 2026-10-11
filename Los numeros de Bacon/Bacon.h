@@ -39,6 +39,6 @@ public:
         if (idActor >= dist.size() || dist[idActor] == -1) {
             return -1;
         }
-        return dist[idActor] / 2; // Dividimos entre 2 por el paso de la película
+        return dist[idActor] / 2; // Dividimos entre 2 por el paso de la pelÃ­cula
     }
 };
