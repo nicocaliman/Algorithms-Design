@@ -6,8 +6,8 @@ using namespace std;
 
 class Red {
 private:
-	std::vector<bool> visit; // visit[v] = ¿hay camino de s a v?	
-	std::vector<int> dist; // dist[v] = aristas en el camino s-v más corto
+	std::vector<bool> visit; // visit[v] = Â¿hay camino de s a v?	
+	std::vector<int> dist; // dist[v] = aristas en el camino s-v mÃ¡s corto
 	int s;
 	int numVisitadas;
 
