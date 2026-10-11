@@ -43,10 +43,10 @@ public:
 	}
 
 	int tramoMasEficiente() const {
-		// Inicializamos con el coste del primer nodo (intersección 0)
+		// Inicializamos con el coste del primer nodo (intersecciÃ³n 0)
 		int minCoste = distA[0] + distL[0] + distT[0];
 
-		// Buscamos si hay alguna intersección i con menor coste
+		// Buscamos si hay alguna intersecciÃ³n i con menor coste
 		for (int i = 1; i < distA.size(); ++i) {
 			int costeActual = distA[i] + distL[i] + distT[i];
 			if (costeActual < minCoste) {
