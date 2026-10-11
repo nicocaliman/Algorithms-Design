@@ -5,7 +5,7 @@ using namespace std;
 
 class Grupo {
 private:
-	std::vector<bool>visitado; // visit[v] = ¿hay camino de s a v?	
+	std::vector<bool>visitado; // visit[v] = Â¿hay camino de s a v?	
 	vector<int> conocenNoticia;
 
 	void dfs(const Grafo& g, int v, vector<int>& componentes) {
