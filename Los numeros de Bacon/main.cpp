@@ -15,15 +15,15 @@ using namespace std;
 
 /*@ <answer>
 
- Escribe aquÌ un comentario general sobre la soluciÛn, explicando cÛmo
- se resuelve el problema y cu·l es el coste de la soluciÛn, en funciÛn
- del tamaÒo del problema.
+ Escribe aqu√≠ un comentario general sobre la soluci√≥n, explicando c√≥mo
+ se resuelve el problema y cu√°l es el coste de la soluci√≥n, en funci√≥n
+ del tama√±o del problema.
 
  @ </answer> */
 
 
  // ================================================================
- // Escribe el cÛdigo completo de tu soluciÛn aquÌ debajo
+ // Escribe el c√≥digo completo de tu soluci√≥n aqu√≠ debajo
  // ================================================================
  //@ <answer>
 
@@ -43,7 +43,7 @@ void resuelveCaso() {
         int numActores;
         cin >> peli >> numActores;
 
-        // 1. Si la pelÌcula no est· en el mapa, le asignamos el siguiente ID
+        // 1. Si la pel√≠cula no est√° en el mapa, le asignamos el siguiente ID
         if (nameToId.count(peli) == 0) {
             nameToId[peli] = idActual;
             idActual++;
@@ -61,12 +61,12 @@ void resuelveCaso() {
             }
             int idActor = nameToId[actor];
 
-            // Guardamos la relaciÛn entre pelÌcula y actor
+            // Guardamos la relaci√≥n entre pel√≠cula y actor
             aristas.push_back({ idPeli, idActor });
         }
     }
 
-    // Al terminar, idActual tiene el n˙mero TOTAL de vÈrtices (pelÌculas + actores)
+    // Al terminar, idActual tiene el n√∫mero TOTAL de v√©rtices (pel√≠culas + actores)
     Grafo g(idActual);
     for (int i = 0; i < aristas.size(); ++i) {
         g.ponArista(aristas[i].first, aristas[i].second);
@@ -75,7 +75,7 @@ void resuelveCaso() {
     int N;
     cin >> N;
 
-    // CASO 1: Kevin Bacon NO est· en la base de datos de este caso
+    // CASO 1: Kevin Bacon NO est√° en la base de datos de este caso
     if (nameToId.count("KevinBacon") == 0) {
         for (int i = 0; i < N; ++i) {
             string actor;
@@ -83,10 +83,10 @@ void resuelveCaso() {
             cout << actor << " INF\n";
         }
     }
-    // CASO 2: Kevin Bacon SÕ est·, hacemos UN solo BFS y respondemos las N consultas
+    // CASO 2: Kevin Bacon S√ç est√°, hacemos UN solo BFS y respondemos las N consultas
     else {
         int idBacon = nameToId["KevinBacon"];
-        Bacon bacon(g, idBacon); // InstanciaciÛn normal en la pila
+        Bacon bacon(g, idBacon); // Instanciaci√≥n normal en la pila
 
         for (int i = 0; i < N; ++i) {
             string actor;
@@ -113,7 +113,7 @@ void resuelveCaso() {
 }
 
 //@ </answer>
-//  Lo que se escriba dejado de esta lÌnea ya no forma parte de la soluciÛn.
+//  Lo que se escriba dejado de esta l√≠nea ya no forma parte de la soluci√≥n.
 
 int main() {
     // ajustes para que cin extraiga directamente de un fichero
