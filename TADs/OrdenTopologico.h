@@ -13,13 +13,13 @@ public:
             if (!visit[v])
                 dfs(g, v);
     }
-    // devuelve la ordenaci髇 topol骻ica
+    // devuelve la ordenaci贸n topol贸gica
     std::deque<int> const& orden() const {
         return _orden;
     }
 private:
     std::vector<bool> visit;
-    std::deque<int> _orden; // ordenaci髇 topol骻ica
+    std::deque<int> _orden; // ordenaci贸n topol贸gica
     void dfs(Digrafo const& g, int v) {
         visit[v] = true;
         for (int w : g.ady(v))
