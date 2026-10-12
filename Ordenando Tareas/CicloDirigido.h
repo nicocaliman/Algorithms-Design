@@ -12,9 +12,9 @@ public:
 	bool hayCiclo() const { return hayciclo; }
 
 private:
-	std::vector<bool> visit; // visit[v] = ¿se ha alcanzado a v en el dfs?
-	std::vector<int> ant; // ant[v] = vértice anterior en el camino a v
-	std::vector<bool> apilado; // apilado[v] = ¿está el vértice v en la pila?
+	std::vector<bool> visit; // visit[v] = Â¿se ha alcanzado a v en el dfs?
+	std::vector<int> ant; // ant[v] = vÃ©rtice anterior en el camino a v
+	std::vector<bool> apilado; // apilado[v] = Â¿estÃ¡ el vÃ©rtice v en la pila?
 	bool hayciclo;
 
 	void dfs(Digrafo const& g, int v) {
@@ -23,7 +23,7 @@ private:
 		for (int w : g.ady(v)) {
 			if (hayciclo) // si hemos encontrado un ciclo terminamos
 				return;
-			if (!visit[w]) { // encontrado un nuevo vértice, seguimos
+			if (!visit[w]) { // encontrado un nuevo vÃ©rtice, seguimos
 				ant[w] = v; dfs(g, w);
 			}
 			else if (apilado[w]) { // hemos detectado un ciclo
