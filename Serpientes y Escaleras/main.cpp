@@ -13,15 +13,15 @@ using namespace std;
 
 /*@ <answer>
 
- Escribe aquí un comentario general sobre la solución, explicando cómo
- se resuelve el problema y cuál es el coste de la solución, en función
- del tamaño del problema.
+ Escribe aquÃ­ un comentario general sobre la soluciÃ³n, explicando cÃ³mo
+ se resuelve el problema y cuÃ¡l es el coste de la soluciÃ³n, en funciÃ³n
+ del tamaÃ±o del problema.
 
  @ </answer> */
 
 
  // ================================================================
- // Escribe el código completo de tu solución aquí debajo
+ // Escribe el cÃ³digo completo de tu soluciÃ³n aquÃ­ debajo
  // ================================================================
  //@ <answer>
 
@@ -46,10 +46,10 @@ void resuelveCaso() {
         salto[a] = b; // Caer en 'a' te lleva a 'b'
     }
 
-    //Creación del grafo 
+    //CreaciÃ³n del grafo 
     Digrafo grafo(totalCasillas + 1);
 
-    //Ponemos las aristas según las tiradas del dado
+    //Ponemos las aristas segÃºn las tiradas del dado
     for (int u = 1; u <= totalCasillas; ++u) {
         for (int d = 1; d <= K; ++d) { // Dado con caras de 1 a K
             int destino = u + d;
@@ -68,7 +68,7 @@ void resuelveCaso() {
 }
 
 //@ </answer>
-//  Lo que se escriba dejado de esta línea ya no forma parte de la solución.
+//  Lo que se escriba dejado de esta lÃ­nea ya no forma parte de la soluciÃ³n.
 
 int main() {
     // ajustes para que cin extraiga directamente de un fichero
