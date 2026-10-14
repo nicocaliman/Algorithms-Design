@@ -14,15 +14,15 @@ using namespace std;
 
 /*@ <answer>
 
- Escribe aquÌ un comentario general sobre la soluciÛn, explicando cÛmo
- se resuelve el problema y cu·l es el coste de la soluciÛn, en funciÛn
- del tamaÒo del problema.
+ Escribe aqu√≠ un comentario general sobre la soluci√≥n, explicando c√≥mo
+ se resuelve el problema y cu√°l es el coste de la soluci√≥n, en funci√≥n
+ del tama√±o del problema.
 
  @ </answer> */
 
 
  // ================================================================
- // Escribe el cÛdigo completo de tu soluciÛn aquÌ debajo
+ // Escribe el c√≥digo completo de tu soluci√≥n aqu√≠ debajo
  // ================================================================
  //@ <answer>
 
@@ -53,7 +53,7 @@ void resuelveCaso() {
         vector<int> asignacion(grafo.V());
         int valorActual = 1;
 
-        // 2. A cada vÈrtice en el orden topolÛgico le asignamos un valor incremental
+        // 2. A cada v√©rtice en el orden topol√≥gico le asignamos un valor incremental
         for (int v : orden.orden()) {
             asignacion[v] = valorActual++;
         }
@@ -68,7 +68,7 @@ void resuelveCaso() {
 }
 
 //@ </answer>
-//  Lo que se escriba dejado de esta lÌnea ya no forma parte de la soluciÛn.
+//  Lo que se escriba dejado de esta l√≠nea ya no forma parte de la soluci√≥n.
 
 int main() {
     // ajustes para que cin extraiga directamente de un fichero
