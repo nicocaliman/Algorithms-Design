@@ -15,15 +15,15 @@ using namespace std;
 
 /*@ <answer>
 
- Escribe aquí un comentario general sobre la solución, explicando cómo
- se resuelve el problema y cuál es el coste de la solución, en función
- del tamaño del problema.
+ Escribe aquÃ­ un comentario general sobre la soluciÃ³n, explicando cÃ³mo
+ se resuelve el problema y cuÃ¡l es el coste de la soluciÃ³n, en funciÃ³n
+ del tamaÃ±o del problema.
 
  @ </answer> */
 
 
  // ================================================================
- // Escribe el código completo de tu solución aquí debajo
+ // Escribe el cÃ³digo completo de tu soluciÃ³n aquÃ­ debajo
  // ================================================================
  //@ <answer>
 
@@ -45,15 +45,15 @@ using namespace std;
 /*@ <answer>
 
  El problema pide determinar si existe un camino entre dos intersecciones donde todas las
- calles del camino tengan una anchura mayor o igual a la del camión.
+ calles del camino tengan una anchura mayor o igual a la del camiÃ³n.
 
- Como el número de consultas K es muy pequeño (K <= 10), realizamos una búsqueda en anchura (BFS)
- por cada consulta a partir del vértice origen. Durante el recorrido BFS, únicamente visitamos
+ Como el nÃºmero de consultas K es muy pequeÃ±o (K <= 10), realizamos una bÃºsqueda en anchura (BFS)
+ por cada consulta a partir del vÃ©rtice origen. Durante el recorrido BFS, Ãºnicamente visitamos
  las aristas con un valor (anchura) >= anchura_camion.
 
  Coste Temporal: O(K * (V + E)) por caso de prueba. Al ser K <= 10, V <= 10.000 y E <= 100.000,
- la solución procesa alrededor de 10^6 operaciones en el peor caso, ejecutándose holgadamente
- dentro del límite de tiempo.
+ la soluciÃ³n procesa alrededor de 10^6 operaciones en el peor caso, ejecutÃ¡ndose holgadamente
+ dentro del lÃ­mite de tiempo.
  Coste Espacial: O(V) por consulta para mantener el vector de visitados y la cola de la BFS.
 
  @ </answer> */
@@ -87,7 +87,7 @@ void resuelveCaso() {
 
 
 //@ </answer>
-//  Lo que se escriba dejado de esta línea ya no forma parte de la solución.
+//  Lo que se escriba dejado de esta lÃ­nea ya no forma parte de la soluciÃ³n.
 
 int main() {
     // ajustes para que cin extraiga directamente de un fichero
