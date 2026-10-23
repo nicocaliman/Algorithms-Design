@@ -8,7 +8,7 @@ class Dijkstra {
 public:
 	Dijkstra(DigrafoValorado<Valor> const& g, vector<bool> const& origenes) : 
 		dist(g.V(), INF), ulti(g.V()), pq(g.V()) {
-		// Recorremos los vértices y los que estén a true son orígenes
+		// Recorremos los vÃ©rtices y los que estÃ©n a true son orÃ­genes
 		for (int i = 0; i < g.V(); ++i) {
 			if (origenes[i]) {
 				dist[i] = 0;
