@@ -14,14 +14,14 @@ using namespace std;
 
 /*@ <answer>
 
- Comentario general sobre la solución:
+ Comentario general sobre la soluciÃ³n:
  Se modela el problema utilizando un digrafo valorado bidireccional. Se ejecutan 
  dos algoritmos de Dijkstra multiorigen (uno para las aldeas galas y otro para las romanas).
- Posteriormente, se evalúan todas las aldeas neutrales calculando la diferencia absoluta 
+ Posteriormente, se evalÃºan todas las aldeas neutrales calculando la diferencia absoluta 
  de distancias a ambos bandos, seleccionando la que minimice dicha diferencia y aplicando 
- la regla de desempate por índice menor.
+ la regla de desempate por Ã­ndice menor.
 
- Coste: O(C log N) por caso de prueba, donde N es el número de aldeas y C el de caminos.
+ Coste: O(C log N) por caso de prueba, donde N es el nÃºmero de aldeas y C el de caminos.
 
  @ </answer> */
 
