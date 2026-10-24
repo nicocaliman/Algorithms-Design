@@ -19,6 +19,33 @@ using namespace std;
  se resuelve el problema y cuál es el coste de la solución, en función
  del tamaño del problema.
 
+ Se pide calcular el número de Bacon de varios actores, es decir, la
+distancia mínima que los separa de Kevin Bacon en la red de películas
+y actores. Se modela como un grafo no dirigido bipartito en el que los
+vértices son tanto las películas como los actores, y hay una arista
+entre una película y cada actor que participa en ella. Para asignar un
+identificador numérico a cada nombre se usa un unordered_map.
+
+Como un paso entre dos actores pasa por una película intermedia, cada
+paso de actor a actor equivale a 2 aristas del grafo. Por eso se hace
+un único BFS desde KevinBacon, que calcula la distancia mínima a todos
+los vértices, y el número de Bacon de un actor es esa distancia entre 2.
+Las N consultas se responden después en O(1) cada una. Si KevinBacon no
+aparece en el caso, o el actor no existe o no es alcanzable, la
+respuesta es INF.
+
+Sea S el número total de apariciones de actores en películas, es decir,
+el número de aristas A. El número de vértices V es como máximo P + S.
+
+Coste en tiempo: O(V + A) para construir el grafo y hacer el BFS, ya que
+cada vértice se encola una vez y cada lista de adyacencia se recorre una
+vez, más O(N) para las consultas. Los accesos al unordered_map cuestan
+O(1) en promedio (suponiendo nombres de longitud acotada).
+
+Coste en espacio adicional: O(V + A), por el grafo construido, el
+unordered_map y la lista de aristas (V y A entradas respectivamente),
+y por los vectores dist y visit y la cola del BFS (tamaño V cada uno).
+
  @ </answer> */
 
 
