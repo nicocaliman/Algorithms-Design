@@ -44,11 +44,8 @@ DFS visita cada vértice una vez y recorre cada lista de adyacencia una
 vez, y asignar el tamaño a los vértices de cada componente suma O(N)
 en total. Imprimir los N resultados es O(N).
 
-Coste en espacio adicional: O(N + S), por el grafo construido (N
-listas y A aristas), los vectores visitado y conocenNoticia (tamaño N),
-el vector de la componente en curso (como mucho N) y la pila de
-recursión del DFS, que en el peor caso (componente en forma de camino)
-alcanza profundidad N.
+Coste en espacio adicional: O(N) sin contar el grafo (que es la
+representación de la entrada), u O(N + S) contando el grafo construido.
 
  @ </answer> */
 
