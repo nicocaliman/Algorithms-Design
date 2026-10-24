@@ -22,7 +22,7 @@ using namespace std;
 
  Para que un grafo sea conexo y sin ciclos debe cumplir que el  numero de aristas sea V() - 1. 
 
- El coste en tiempo en el peor de los casos de la solucion esta en O(V+A), pues los vertices solo se visitan 1 vez.
+ El coste en tiempo en el peor de los casos de la solucion esta en O(V+A), pues los vertices solo se visitan 1 vez. La comprobación de A == V-1 es O(1) y el bucle final es O(V).
 
  @ </answer> */
 
