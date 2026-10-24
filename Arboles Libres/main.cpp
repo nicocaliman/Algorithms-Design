@@ -18,12 +18,14 @@ using namespace std;
  se resuelve el problema y cuál es el coste de la solución, en función
  del tamaño del problema.
 
- Lo que intenta resolver el programa es comprobar si el grafo es libre. Es decir, si es conexo y aciclico. Para ello, vamos a usar un DFS para recorrer el grafo desde un origen S y ver si podemos alcanzar el resto de vertices.
+Un grafo es libre si es conexo y acíclico. Un grafo con V vértices es libre si y solo si es conexo y tiene exactamente V-1 aristas, por lo que no hace falta detectar ciclos explícitamente. Primero se comprueba que A = V-1; si no se cumple, la respuesta es NO. Si se cumple, se hace un DFS desde el vértice 0 y se comprueba que todos los vértices son alcanzables.
 
- Para que un grafo sea conexo y sin ciclos debe cumplir que el  numero de aristas sea V() - 1. 
+Coste en tiempo: O(V + A), ya que el DFS visita cada vértice una vez y recorre cada lista de adyacencia una vez. Coste en espacio adicional: O(V).
 
- El coste en tiempo en el peor de los casos de la solucion esta en O(V+A), pues los vertices solo se visitan 1 vez. La comprobación de A == V-1 es O(1) y el bucle final es O(V).
-
+Coste en espacio adicional: O(V), por los vectores visit y ant (tamaño V
+cada uno) y por la pila de recursión del DFS, que en el peor caso
+(grafo en forma de camino) alcanza profundidad V. 
+ 
  @ </answer> */
 
 
