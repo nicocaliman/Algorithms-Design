@@ -18,9 +18,9 @@ using namespace std;
  se resuelve el problema y cuál es el coste de la solución, en función
  del tamaño del problema.
 
- Lo que intenta resolver el programa es comprobar si el grafo es conexo y aciclico. Para ello, vamos a usar un DFS para recorrer el grafo desde un origen S y ver si podemos alcanzar el resto de vertices.
+ Lo que intenta resolver el programa es comprobar si el grafo es libre. Es decir, si es conexo y aciclico. Para ello, vamos a usar un DFS para recorrer el grafo desde un origen S y ver si podemos alcanzar el resto de vertices.
 
- Para que un grafo sea conexo, ademas debe cumplir que el numero de aristas minimo que tenga el grafo sea V() - 1. 
+ Para que un grafo sea conexo y sin ciclos debe cumplir que el  numero de aristas sea V() - 1. 
 
  El coste en tiempo en el peor de los casos de la solucion esta en O(V+A), pues los vertices solo se visitan 1 vez.
 
