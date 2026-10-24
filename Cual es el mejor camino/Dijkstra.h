@@ -9,7 +9,7 @@ public:
 	Dijkstra(DigrafoValorado<Valor> const& g, int o) : 
 		dist(g.V(), INF), ulti(g.V()), pq(g.V()), aristasOD(g.V(), 0)
 	{
-		// Recorremos los vértices y los que estén a true son orígenes
+		// Recorremos los vÃ©rtices y los que estÃ©n a true son orÃ­genes
 		dist[o] = 0;
 		pq.push(o, 0);
 
