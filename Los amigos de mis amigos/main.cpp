@@ -1,7 +1,7 @@
 
 /*@ <answer>
  *
- * Nombre y Apellidos:
+ * Nombre y Apellidos: Nicolae Gabriel Caliman
  *
  *@ </answer> */
 
@@ -17,6 +17,20 @@ using namespace std;
  Escribe aquí un comentario general sobre la solución, explicando cómo
  se resuelve el problema y cuál es el coste de la solución, en función
  del tamaño del problema.
+
+ Se pide calcular el tamaño de la mayor componente conexa del grafo.
+Se recorre el grafo con DFS: para cada vértice no visitado se lanza un
+DFS que recorre toda su componente conexa y devuelve el número de
+vértices que ha visitado, es decir, el tamaño de esa componente. Se
+mantiene el máximo de todos esos tamaños. Como el vector visit no se
+reinicia, cada vértice se visita una sola vez en total.
+
+Coste en tiempo: O(V + A), ya que cada vértice se visita una vez y cada
+lista de adyacencia se recorre una vez, sumando todas las componentes.
+
+Coste en espacio adicional: O(V), por el vector visit (tamaño V) y por
+la pila de recursión del DFS, que en el peor caso (componente en forma
+de camino) alcanza profundidad V.
 
  @ </answer> */
 
