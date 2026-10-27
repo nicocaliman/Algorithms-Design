@@ -1,32 +1,3 @@
-
-/*@ <answer>
- *
- * Nombre y Apellidos:
- *
- *@ </answer> */
-
-#include <iostream>
-#include <fstream>
-
-using namespace std;
-
-#include "GrafoValorado.h"
-
-
-/*@ <answer>
-
- Escribe aquí un comentario general sobre la solución, explicando cómo
- se resuelve el problema y cuál es el coste de la solución, en función
- del tamaño del problema.
-
- @ </answer> */
-
-
- // ================================================================
- // Escribe el código completo de tu solución aquí debajo
- // ================================================================
- //@ <answer>
-
 /*@ <answer>
  *
  * Nombre y Apellidos:
