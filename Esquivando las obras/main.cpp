@@ -11,9 +11,9 @@ using namespace std;
 
 #pragma once
 /*
- * ImplementaciÛn de matrices (arrays bidimensionales)
+ * Implementaci√≥n de matrices (arrays bidimensionales)
  * Copyright (c) 2020  Alberto Verdejo
- * Modificado por 2023 Ignacio F·bregas
+ * Modificado por 2023 Ignacio F√°bregas
  */
 
 #ifndef MATRIZ_H
@@ -29,7 +29,7 @@ public:
     // con todas sus celdas inicializadas al valor e
     Matriz(int fils = 0, int cols = 0, Object e = Object()) : datos(fils, std::vector<Object>(cols, e)) {}
 
-    // operadores para poder utilizar notaciÛn M[i][j]
+    // operadores para poder utilizar notaci√≥n M[i][j]
     std::vector<Object> const& operator[](int f) const {
         return datos[f];
     }
@@ -38,7 +38,7 @@ public:
         return datos[f];
     }
 
-    // MÈtodos que lanzan una excepciÛn si la posiciÛn no existe
+    // M√©todos que lanzan una excepci√≥n si la posici√≥n no existe
     Object const& at(int f, int c) const {
         return datos.at(f).at(c);
     }
@@ -76,15 +76,15 @@ inline std::ostream& operator<<(std::ostream& out, Matriz<Object> const& m) {
 
 /*@ <answer>
 
- Escribe aquÌ un comentario general sobre la soluciÛn, explicando cÛmo
- se resuelve el problema y cu·l es el coste de la soluciÛn, en funciÛn
- del tamaÒo del problema.
+ Escribe aqu√≠ un comentario general sobre la soluci√≥n, explicando c√≥mo
+ se resuelve el problema y cu√°l es el coste de la soluci√≥n, en funci√≥n
+ del tama√±o del problema.
 
  @ </answer> */
 
 
  // ================================================================
- // Escribe el cÛdigo completo de tu soluciÛn aquÌ debajo
+ // Escribe el c√≥digo completo de tu soluci√≥n aqu√≠ debajo
  // ================================================================
  //@ <answer>
 
@@ -99,7 +99,7 @@ int numCaminos(const Matriz<char>& m, int i, int j, Matriz<int>& memo) {
         return memo[i][j];
     }
 
-    // 3. Calculamos los caminos desde (i, j) sumando este y sur (tu misma lÛgica)
+    // 3. Calculamos los caminos desde (i, j) sumando este y sur (tu misma l√≥gica)
     int total = 0;
 
     if (m.posCorrecta(i, j + 1) && m.at(i, j + 1) != 'X') {
@@ -137,7 +137,7 @@ void resuelveCaso() {
 }
 
 //@ </answer>
-//  Lo que se escriba dejado de esta lÌnea ya no forma parte de la soluciÛn.
+//  Lo que se escriba dejado de esta l√≠nea ya no forma parte de la soluci√≥n.
 
 int main() {
     // ajustes para que cin extraiga directamente de un fichero
