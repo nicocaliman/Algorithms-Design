@@ -12,15 +12,15 @@ using namespace std;
 
 /*@ <answer>
 
- El problema se resuelve mediante programaciÛn din·mica de derecha a izquierda
- (i de N-1 a 0) con doble puntero sobre los N puntos kilomÈtricos ordenados.
- Para cada ·rea i, sig[i] guarda el menor Ìndice j > i tal que
+ El problema se resuelve mediante programaci√≥n din√°mica de derecha a izquierda
+ (i de N-1 a 0) con doble puntero sobre los N puntos kilom√©tricos ordenados.
+ Para cada √°rea i, sig[i] guarda el menor √≠ndice j > i tal que
  km[j] - km[i] >= K (o N si no existe ninguno compatible a la derecha), y
- ben[i] guarda el beneficio m·ximo obtenible desde i hasta N-1.
+ ben[i] guarda el beneficio m√°ximo obtenible desde i hasta N-1.
 
- Como km est· ordenado crecientemente y el Ìndice i decrece, el puntero j
- retrocede en total como m·ximo N veces a lo largo de todo el bucle.
- En la reconstrucciÛn se recorre de izquierda a derecha: si se toma i, se
+ Como km est√° ordenado crecientemente y el √≠ndice i decrece, el puntero j
+ retrocede en total como m√°ximo N veces a lo largo de todo el bucle.
+ En la reconstrucci√≥n se recorre de izquierda a derecha: si se toma i, se
  guarda km[i] en sol y se salta a sig[i]; en caso contrario, se avanza a i + 1.
 
  Coste temporal: O(N) por caso de prueba.
@@ -30,7 +30,7 @@ using namespace std;
 
 
  // ================================================================
- // Escribe el cÛdigo completo de tu soluciÛn aquÌ debajo
+ // Escribe el c√≥digo completo de tu soluci√≥n aqu√≠ debajo
  // ================================================================
  //@ <answer>
 
@@ -53,9 +53,9 @@ bool resuelveCaso() {
     }
 
     // resolver el caso
-    vector<int> sig(N, N);           // siguiente Ìndice compatible desde i
+    vector<int> sig(N, N);           // siguiente √≠ndice compatible desde i
     vector<long long> ben(N + 1, 0); // ben[N] = 0 como caso base
-    vector<bool> tomado(N, false);   // indica si se toma el ·rea i en el Ûptimo
+    vector<bool> tomado(N, false);   // indica si se toma el √°rea i en el √≥ptimo
 
     int j = N;
     for (int i = N - 1; i >= 0; --i) {
@@ -77,7 +77,7 @@ bool resuelveCaso() {
         }
     }
 
-    // reconstrucciÛn
+    // reconstrucci√≥n
     vector<long long> sol;
     int i = 0;
     while (i < N) {
@@ -92,7 +92,7 @@ bool resuelveCaso() {
         }
     }
 
-    // escribir la soluciÛn
+    // escribir la soluci√≥n
     cout << ben[0] << '\n';
     for (size_t idx = 0; idx < sol.size(); ++idx) {
         if (idx > 0) cout << ' ';
@@ -104,7 +104,7 @@ bool resuelveCaso() {
 }
 
 //@ </answer>
-//  Lo que se escriba dejado de esta lÌnea ya no forma parte de la soluciÛn.
+//  Lo que se escriba dejado de esta l√≠nea ya no forma parte de la soluci√≥n.
 
 int main() {
     // ajustes para que cin extraiga directamente de un fichero
