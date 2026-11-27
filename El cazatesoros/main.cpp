@@ -19,7 +19,7 @@ public:
     // con todas sus celdas inicializadas al valor e
     Matriz(int fils = 0, int cols = 0, Object e = Object()) : datos(fils, std::vector<Object>(cols, e)) {}
 
-    // operadores para poder utilizar notaciÛn M[i][j]
+    // operadores para poder utilizar notaci√≥n M[i][j]
     std::vector<Object> const& operator[](int f) const {
         return datos[f];
     }
@@ -28,7 +28,7 @@ public:
         return datos[f];
     }
 
-    // MÈtodos que lanzan una excepciÛn si la posiciÛn no existe
+    // M√©todos que lanzan una excepci√≥n si la posici√≥n no existe
     Object const& at(int f, int c) const {
         return datos.at(f).at(c);
     }
@@ -63,15 +63,15 @@ inline std::ostream& operator<<(std::ostream& out, Matriz<Object> const& m) {
 
 /*@ <answer>
 
- Escribe aquÌ un comentario general sobre la soluciÛn, explicando cÛmo
- se resuelve el problema y cu·l es el coste de la soluciÛn, en funciÛn
- del tamaÒo del problema.
+ Escribe aqu√≠ un comentario general sobre la soluci√≥n, explicando c√≥mo
+ se resuelve el problema y cu√°l es el coste de la soluci√≥n, en funci√≥n
+ del tama√±o del problema.
 
  @ </answer> */
 
 
  // ================================================================
- // Escribe el cÛdigo completo de tu soluciÛn aquÌ debajo
+ // Escribe el c√≥digo completo de tu soluci√≥n aqu√≠ debajo
  // ================================================================
  //@ <answer>
 
@@ -124,7 +124,7 @@ void resuelveCaso() {
 }
 
 //@ </answer>
-//  Lo que se escriba dejado de esta lÌnea ya no forma parte de la soluciÛn.
+//  Lo que se escriba dejado de esta l√≠nea ya no forma parte de la soluci√≥n.
 
 int main() {
     // ajustes para que cin extraiga directamente de un fichero
