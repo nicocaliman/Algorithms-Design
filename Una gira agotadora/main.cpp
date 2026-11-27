@@ -12,14 +12,14 @@ using namespace std;
 
 /*@ <answer>
 
- El problema se resuelve mediante programación dinámica unidimensional. Para
- cada día i (0 <= i < N) con recaudación rec[i], se calcula la recaudación
- máxima sin actuar en dos días consecutivos eligiendo entre no actuar ese
- día (mejor acumulado hasta i-1) o actuar ese día y sumar lo acumulado
+ El problema se resuelve mediante programaciÃ³n dinÃ¡mica unidimensional. Para
+ cada dÃ­a i (0 <= i < N) con recaudaciÃ³n rec[i], se calcula la recaudaciÃ³n
+ mÃ¡xima sin actuar en dos dÃ­as consecutivos eligiendo entre no actuar ese
+ dÃ­a (mejor acumulado hasta i-1) o actuar ese dÃ­a y sumar lo acumulado
  hasta i-2.
 
- Como cada transición solo consulta los dos estados inmediatamente anteriores,
- se actualiza de forma iterativa en un único recorrido lineal.
+ Como cada transiciÃ³n solo consulta los dos estados inmediatamente anteriores,
+ se actualiza de forma iterativa en un Ãºnico recorrido lineal.
 
  Coste temporal: O(N) por caso de prueba.
  Coste espacial: O(N) para almacenar los datos del caso (O(1) extra en DP).
@@ -28,7 +28,7 @@ using namespace std;
 
 
  // ================================================================
- // Escribe el código completo de tu solución aquí debajo
+ // Escribe el cÃ³digo completo de tu soluciÃ³n aquÃ­ debajo
  // ================================================================
  //@ <answer>
 
@@ -46,8 +46,8 @@ void resuelveCaso() {
         return;
     }
 
-    long long ant2 = rec[0];                  // máximo hasta día 0
-    long long ant1 = max(rec[0], rec[1]);     // máximo hasta día 1
+    long long ant2 = rec[0];                  // mÃ¡ximo hasta dÃ­a 0
+    long long ant1 = max(rec[0], rec[1]);     // mÃ¡ximo hasta dÃ­a 1
 
     for (int i = 2; i < N; ++i) {
         long long actual = max(ant1, rec[i] + ant2);
@@ -59,7 +59,7 @@ void resuelveCaso() {
 }
 
 //@ </answer>
-//  Lo que se escriba dejado de esta línea ya no forma parte de la solución.
+//  Lo que se escriba dejado de esta lÃ­nea ya no forma parte de la soluciÃ³n.
 
 int main() {
     // ajustes para que cin extraiga directamente de un fichero
