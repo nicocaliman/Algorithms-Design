@@ -13,23 +13,23 @@ using namespace std;
 
 /*@ <answer>
 
- Escribe aquí un comentario general sobre la solución, explicando cómo
- se resuelve el problema y cuál es el coste de la solución, en función
- del tamaño del problema.
+ Escribe aquÃ­ un comentario general sobre la soluciÃ³n, explicando cÃ³mo
+ se resuelve el problema y cuÃ¡l es el coste de la soluciÃ³n, en funciÃ³n
+ del tamaÃ±o del problema.
 
  @ </answer> */
 
 
  // ================================================================
- // Escribe el código completo de tu solución aquí debajo
+ // Escribe el cÃ³digo completo de tu soluciÃ³n aquÃ­ debajo
  // ================================================================
  //@ <answer>
 
 #pragma once
 /*
- * Implementación de matrices (arrays bidimensionales)
+ * ImplementaciÃ³n de matrices (arrays bidimensionales)
  * Copyright (c) 2020  Alberto Verdejo
- * Modificado por 2023 Ignacio Fábregas
+ * Modificado por 2023 Ignacio FÃ¡bregas
  */
 
 #ifndef MATRIZ_H
@@ -45,7 +45,7 @@ public:
     // con todas sus celdas inicializadas al valor e
     Matriz(int fils = 0, int cols = 0, Object e = Object()) : datos(fils, std::vector<Object>(cols, e)) {}
 
-    // operadores para poder utilizar notación M[i][j]
+    // operadores para poder utilizar notaciÃ³n M[i][j]
     std::vector<Object> const& operator[](int f) const {
         return datos[f];
     }
@@ -54,7 +54,7 @@ public:
         return datos[f];
     }
 
-    // Métodos que lanzan una excepción si la posición no existe
+    // MÃ©todos que lanzan una excepciÃ³n si la posiciÃ³n no existe
     Object const& at(int f, int c) const {
         return datos.at(f).at(c);
     }
@@ -92,7 +92,7 @@ inline std::ostream& operator<<(std::ostream& out, Matriz<Object> const& m) {
 vector<string> leerLista() {
     string linea;
     getline(cin, linea);
-    // Por si quedara algún retorno de carro '\r' en ficheros de Windows
+    // Por si quedara algÃºn retorno de carro '\r' en ficheros de Windows
     if (!linea.empty() && linea.back() == '\r') {
         linea.pop_back();
     }
@@ -162,7 +162,7 @@ void resuelveCaso() {
 }
 
 //@ </answer>
-//  Lo que se escriba dejado de esta línea ya no forma parte de la solución.
+//  Lo que se escriba dejado de esta lÃ­nea ya no forma parte de la soluciÃ³n.
 
 int main() {
     // ajustes para que cin extraiga directamente de un fichero
